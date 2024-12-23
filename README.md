@@ -1,4 +1,4 @@
-# To-Do List Application
+# SP - To-Do-List
 
 A simple and user-friendly To-Do List application to help you organize tasks efficiently. This project is created using **HTML**, **CSS**, and **JavaScript**.
 
@@ -18,3 +18,8 @@ A simple and user-friendly To-Do List application to help you organize tasks eff
 1. Clone the repository:
    ```bash
    git clone https://github.com/Pankaj-026/SP-ToDoList.git
+
+
+## Live Demo
+
+Check out the live demo of the To-Do List app here: [sp-todo.netlify.app](https://sp-task.netlify.app)
