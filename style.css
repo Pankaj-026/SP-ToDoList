@@ -40,8 +40,9 @@ body {
 /* Form Section */
 form {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    justify-content: center;
+    gap: 10px;
+    /* Space between input and button */
 }
 
 form input[type="text"] {
@@ -51,10 +52,13 @@ form input[type="text"] {
     border: none;
     outline: none;
     font-size: 1rem;
-    margin-right: 10px;
+    min-width: 0;
+    /* Prevent input from overflowing */
 }
 
 form button {
+    flex-shrink: 0;
+    /* Prevent button from shrinking */
     background-color: #ff7f50;
     color: #fff;
     border: none;
@@ -63,15 +67,11 @@ form button {
     border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s;
+    white-space: nowrap;
 }
 
 form button:hover {
     background-color: #ff6347;
-}
-
-.search__box{
-    width: 100%;
-    text-align: center;
 }
 
 /* Todo List Styling */
@@ -119,14 +119,14 @@ form button:hover {
     background-color: #4682b4;
 }
 
-/* Responsive Design */
+/* Responsive Design for Medium Screens */
 @media (max-width: 768px) {
     .main {
         padding: 15px;
     }
 
     form input[type="text"] {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     form button {
@@ -137,9 +137,40 @@ form button:hover {
     .todoList article {
         padding: 8px;
     }
+    
+    .search__box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
 
     .todoList label {
         font-size: 0.9rem;
     }
 }
 
+/* Responsive Design for Small Screens */
+@media (max-width: 320px) {
+    form {
+        flex-wrap: nowrap;
+        /* Prevent wrapping */
+    }
+
+    form input[type="text"] {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    form button {
+        font-size: 0.8rem;
+        padding: 8px 10px;
+    }
+
+    .search__box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+}
